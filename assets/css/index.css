@@ -1,0 +1,198 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #f2f2f2;
+	font-family: 'Lato', sans-serif;
+}
+img{
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+}
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+.hero{
+	padding: 32px 15px;
+    display: grid;
+    grid-template-columns: minmax(auto, 1024px);
+    justify-content: center;
+}
+.hero-container{
+	display: grid;
+	grid-template-columns: 1fr 1.2fr;
+	grid-template-areas: "form-layout signature-layout"
+}
+.form-layout{
+	padding : 1.5em;
+	text-align: center;
+	grid-area: form-layout;
+	min-height: 374px;
+}
+.form-layout h2{
+	margin-bottom: 20px;
+}
+.form-layout .form-input{
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #c0c0c0;
+	font-size: 18px;
+	padding: 10px;
+	margin-bottom: 25px;
+	box-sizing: border-box;
+	background: transparent;
+	outline: none;
+	transition: all .6s ease;
+}
+.form-layout .form-input::-webkit-input-placeholder{
+	color: #333333;
+	font-weight: 700;
+}
+.form-layout .form-input:focus{
+	border-bottom: 2px solid #800000;
+}
+.form-layout .company-input{
+	display: flex;
+	justify-content: space-between;
+	font-size: 18px;
+	color: #333333;
+}
+.form-input-submit{
+	color: #fff;
+	background-color: #fc5e09;
+	padding: 10px 15px;
+	border-radius: 6px;
+	border: 2px solid #fc5e09;
+	cursor: pointer;
+	outline: none;
+	font-size: 25px;
+	transition: all 0.4s ease;
+}
+.form-input-submit:hover{
+	background-color: transparent;
+	border: 2px solid #c0c0c0;
+	color: #fc5e09;
+	transition: all 0.4s ease;
+}
+/*SIGNATURE*/
+.signature-layout{
+	grid-area: signature-layout;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+.signature-layout img{
+	width: 256px;
+	height: 256px;
+	object-fit: cover;
+}
+.signature-container{
+	display: grid;
+	grid-template-columns: 1fr 1.4fr;
+	grid-template-areas: "company-logo data"
+						 "services services";
+	grid-row-gap: 20px;
+	align-items: center;
+	justify-content: space-between;
+	border: 2px dashed #c0c0c0;
+	background-color: #fff;
+	padding: 30px 12px 30px;
+	min-width: 585px;
+}
+.data:before{
+	content: '';
+	width: 3px;
+	height: 51%;
+	position: absolute;
+	top: 0;
+	left: -18px;
+	background: linear-gradient(to top, rgba(128, 128, 128, 1) 70%, rgba(128, 128, 128, 0) 100%) ;
+}
+.company-logo{
+	grid-area: company-logo;
+	padding-left: 8px;
+}
+.company-logo img{
+	width: 202px;
+	height: 52px;
+}
+.data{
+	position: relative;
+	grid-area: data;
+}
+.data:after{
+	content: '';
+	width: 3px;
+	height: 51%;
+	position: absolute;
+	bottom: 0;
+	left: -18px;
+	background: linear-gradient(to bottom, rgba(128, 128, 128, 1) 70%, rgba(128, 128, 128, 0) 100%) ;
+}
+.data-name{
+	display: block;
+	color: #fc5e09;
+	font-size: 23px;
+}
+.data-work-position{
+	display: block;
+	font-weight: bold;
+}
+.data-contact{
+	display: flex;
+	font-size: 13px;
+	padding-top: 3px;
+}
+.data-contact span{
+	display: block;
+}
+.signature-container .icon{
+	color: #fc5e09;
+	/*color: #fd6244*/
+	width: 23px;
+}
+.services{
+	grid-area: services;
+	background-color: #808080;
+	color: #fff;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+}
+.service-detail{
+	display: flex;
+	align-items: center;
+	padding: 12px 10px;
+}
+.service-detail:nth-of-type(2),
+.service-detail:nth-of-type(4){
+	background-color: #595959;
+}
+.service-detail h5{
+	padding-left: 10px;
+}
+.services .icon{
+	color: #fff;
+	font-size: 29px;
+}
+
+
+
+.fadeIn {
+  animation: 3000ms fadeIn;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
